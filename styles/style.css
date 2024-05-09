@@ -1,3 +1,12 @@
+:root {
+    --black-color: #000000;
+    --green-color: rgba(101, 178, 101, 0.75);
+    --yellow-color: rgba(232, 182, 0, 0.75);
+    --orange-color: #ea9e00;
+    --red-color: rgba(217, 103, 99, 0.75);
+    --blue-color: #5783e5;
+}
+
 *,
 *::before,
 *::after {
@@ -7,7 +16,79 @@
 }
 
 body {
-    background-color: rgb(20, 20, 20);
-    color: hsl(0, 0%, 73%);
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--black-color);
+    color: var(--orange-color);
+    font-family: Orbitron;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8rem;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    font-size: 2rem;
+}
+
+.time {
+    font-size: 4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.time .milliseconds {
+    font-size: 2.5rem;
+}
+
+.minutes,
+.seconds,
+.milliseconds {
+    display: inline-block;
+    text-align: center;
+    width: 130px;
+}
+
+.line {
+    background-color: var(--orange-color);
+    height: 0.01rem;
+    width: 22rem;
+    margin-bottom: 2rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-css {
+    border: none;
+    color: white;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s linear;
+}
+
+.btn-css:hover {
+    opacity: 0.9;
+}
+
+.buttons #start {
+    background-color: var(--green-color);
+}
+
+.buttons #stop {
+    background-color: var(--red-color);
+}
+
+.buttons #reset {
+    background-color: var(--yellow-color);
 }
